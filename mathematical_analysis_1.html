@@ -6,7 +6,7 @@
     <title>Mathematical Analysis 1</title>
 
     <meta name="description" content="A collection of notes refined to be used both for practice and in exams.">
-    <meta name="keywords" content="Mathematical Analisis, Math Notes, Study, Mathematics, Physics, Physics Notes">
+    <meta name="keywords" content="Mathematical Analysis, Math Notes, Study, Mathematics, Physics, Physics Notes">
     <meta name="Giacomo" content="UNIPI">
     
     <link rel="icon" type="image/x-icon" href="icon.ico">
@@ -36,38 +36,67 @@
         <p>Ordinary Differential Equations (ODEs) are differential equations that have a single variable. ODEs have a general form:</p>
         $$F\left(x,y,\frac{dy}{dx},\frac{d^{2}y}{dx^{2}},...\right)=0$$
         
-        <p>Partial Differential Equations (PDEs) have multiple independent variables and use partial derivatives:</p>
+        <p>where:</p>
+        <ul>
+            <li>x is the independent variable</li>
+            <li>y is the dependent variable</li>
+        </ul>
+        
+        <p>Partial Differential Equations (PDEs) involve multiple independent variables. Instead of using standard derivatives (d), they use partial derivatives (∂) to show the change with respect to multiple variables. The general form is:</p>
         $$F\left(x,y,u,\frac{\partial u}{\partial x},\frac{\partial u}{\partial y},...\right)=0$$
         
+        <p>where:</p>
+        <ul>
+            <li>x, y are independent variables</li>
+            <li>u(x, y) is the dependent variable</li>
+        </ul>
+        
+        <p>Fundamentally, an ODE can be seen as a way to track a single car, while a PDE tracks all the traffic in a city.</p>
+        
         <h3>Types of ODEs</h3>
-        <p>ODEs are classified by their order and whether they are linear or nonlinear. Here is a basic first-order ODE:</p>
+        <p>ODEs are classified by their order (the highest derivative present) and whether they are linear or non-linear.</p>
+        <h4>First-order ODE:</h4>
         $$\frac{dy}{dx} + y = x$$
         
-        <p>A second-order ODE example:</p>
+        <h4>Second-order ODE:</h4>
         $$\frac{d^{2}y}{dx^{2}}+2\frac{dy}{dx}+y=0$$
         
+        <h4>Higher-order ODE:</h4>
+        $$a_{n}(x)\frac{d^{n}y}{dx^{n}} + a_{n-1}(x)\frac{d^{n-1}y}{dx^{n-1}} + ... + a_{1}(x)\frac{dy}{dx} + a_{0}(x)y = f(x)$$
+        
+        <p>A linear ODE is one where the dependent variable and its derivatives appear only in a linear form (i.e., they are not multiplied together). Anything else is considered non-linear.</p>
+        
         <h3>Solving ODEs</h3>
-        <p>A separable ODE can be written as:</p>
+        <h4>Separable ODEs:</h4>
         $$\frac{dy}{dx} = f(x)g(y)$$
         
-        <p>which transforms into:</p>
+        <p>Rearranges to:</p>
         $$\frac{dy}{g(y)} = f(x)dx$$
         
-        <p>and integrates as:</p>
+        <p>Integrating both sides:</p>
         $$\int \frac{dy}{g(y)} = \int f(x)dx$$
         
-        <h3>Integrating Factor Method</h3>
-        <p>For an equation of the form:</p>
+        <h4>Integrating Factor Method:</h4>
         $$\frac{dy}{dx} + P(x)y = Q(x)$$
         
-        <p>Multiplying by:</p>
+        <p>Multiplying by the integrating factor:</p>
         $$\mu(x) = e^{\int P(x)dx}$$
         
-        <p>Results in:</p>
+        <p>Gives:</p>
+        $$\frac{d}{dx}(\mu(x)y) = \mu(x)Q(x)$$
+        
+        <p>Solving:</p>
         $$y = \frac{1}{\mu(x)} \int \mu(x)Q(x)dx + C$$
         
-        <h2>Special Theorems and Problems</h2>
-        <h3>Cauchy's Problem</h3>
+        <h3>Higher-Order Equations</h3>
+        <h4>Homogeneous Equations with Constant Coefficients:</h4>
+        $$a_n \frac{d^n y}{dx^n} + a_{n-1} \frac{d^{n-1} y}{dx^{n-1}} + ... + a_1 \frac{dy}{dx} + a_0 y = 0$$
+        
+        <h4>Non-Homogeneous Equations:</h4>
+        $$a_n \frac{d^n y}{dx^n} + a_{n-1} \frac{d^{n-1} y}{dx^{n-1}} + ... + a_1 \frac{dy}{dx} + a_0 y = f(x)$$
+        
+        <h3>Special Theorems and Problems</h3>
+        <h4>Cauchy's Problem</h4>
         <p>More details to be added...</p>
     </div>
     <a href="analisi1.pdf" class="button" download>Download PDF</a>
