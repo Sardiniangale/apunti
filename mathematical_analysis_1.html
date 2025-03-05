@@ -28,76 +28,77 @@
         <h1>Analisi 1</h1>
         <h3>Giacomo</h3>
         <h4>04/03/2025</h4>
-        
-        <h2>Differential Equations</h2>
+
+    <div class="container">
+        <h1>Analisi 1</h1>
+        <h3>Giacomo</h3>
+        <h4>04/03/2025</h4>
+    
+        <h1 id="differential-equations" class="unnumbered">Differential Equations</h1>
         <p>Ordinary differential equations will not be covered in this chapter as they are an earlier topic. However, I will do a brief definition at the start. PDEs will be the primary focus in this chapter.</p>
         
-        <h3>ODEs and PDEs</h3>
+        <h3 id="odes-and-pdes" class="unnumbered">ODEs and PDEs</h3>
         <p>Ordinary Differential Equations (ODEs) are differential equations that have a single variable. ODEs have a general form:</p>
-        $$F\left(x,y,\frac{dy}{dx},\frac{d^{2}y}{dx^{2}},...\right)=0$$
-        
+        <p>$$F\left(x,y,\frac{dy}{dx},\frac{d^{2}y}{dx^{2}},...,\frac{d^{n}y}{dx^{n}}\right)=0$$</p>
         <p>where:</p>
         <ul>
-            <li>x is the independent variable</li>
-            <li>y is the dependent variable</li>
+            <li>x - independent</li>
+            <li>y - dependent</li>
         </ul>
-        
-        <p>Partial Differential Equations (PDEs) involve multiple independent variables. Instead of using standard derivatives (d), they use partial derivatives (∂) to show the change with respect to multiple variables. The general form is:</p>
-        $$F\left(x,y,u,\frac{\partial u}{\partial x},\frac{\partial u}{\partial y},...\right)=0$$
-        
+        <p>Partial Differential Equations (PDEs) are differential equations that have multiple independent variables. Instead of using the standard d, they use partial derivatives (∂) to show the change with respect to multiple variables. The general form is:</p>
+        <p>$$F\left(x,y,u,\frac{\partial u}{\partial x},\frac{\partial u}{\partial y},\frac{\partial^{2}u}{\partial x^{2}},....\right)=0$$</p>
         <p>where:</p>
         <ul>
-            <li>x, y are independent variables</li>
-            <li>u(x, y) is the dependent variable</li>
+            <li>x, y - independent</li>
+            <li>u(x,y) - dependent</li>
         </ul>
+        <p>Fundamentally, imagine an ODE as a means to track a single car, while a PDE tracks all the traffic in the city.</p>
         
-        <p>Fundamentally, an ODE can be seen as a way to track a single car, while a PDE tracks all the traffic in a city.</p>
+        <h3 id="types-of-odes" class="unnumbered">Types of ODEs</h3>
+        <p>ODEs are usually classified by two primary aspects: their order, i.e., the degree of their derivative, and whether they are linear or non-linear.</p>
+        <p>First-order ODEs involve only the first derivative. Here is a basic first-order ODE:</p>
+        <p>$$\frac{dy}{dx}+y=x$$</p>
+        <p>Second-order ODEs involve up to the second derivative. Here is an example:</p>
+        <p>$$\frac{d^{2}y}{dx^{2}}+2\frac{dy}{dx}+y=0$$</p>
+        <p>Higher-order ODEs involve everything from the third derivative or higher. It is unlikely to ever appear in a first-year analysis exam, but you never know.</p>
+        <p>Linear and Non-linear ODEs: An ODE is linear if the dependent variable and its derivatives appear in a linear form, meaning they are not multiplied together. Anything else is considered non-linear. A linear ODE can be written in the form:</p>
+        <p>$$a_{n}(x)\frac{d^{n}y}{dx^{n}}+a_{n-1}(x)\frac{d^{n-1}y}{dx^{n-1}}+...+a_{1}(x)\frac{dy}{dx}+a_{0}(x)y=f(x)$$</p>
+        <p>where:</p>
+        <ul>
+            <li>a(x) is a function of x</li>
+        </ul>
+        <p>Here are some basic examples. We will go into much more detail when solving ODEs.</p>
+        <p>$$\frac{dy}{dx}+3y=x$$, and $$\frac{d^{2}y}{dx^{2}}+x\frac{dy}{dx}+y=\sin x$$</p>
+        <p>(NON-LINEAR) To be added</p>
         
-        <h3>Types of ODEs</h3>
-        <p>ODEs are classified by their order (the highest derivative present) and whether they are linear or non-linear.</p>
-        <h4>First-order ODE:</h4>
-        $$\frac{dy}{dx} + y = x$$
+        <h3 id="homogeneous-non-homogeneous-autonomous-and-non-autonomous" class="unnumbered">Homogeneous, Non-homogeneous, Autonomous, and Non-autonomous</h3>
         
-        <h4>Second-order ODE:</h4>
-        $$\frac{d^{2}y}{dx^{2}}+2\frac{dy}{dx}+y=0$$
+        <h3 id="dealing-and-solving-odes" class="unnumbered">Dealing and Solving ODEs</h3>
+        <p>A separable ODE can be written as:</p>
+        <p>$$\frac{dy}{dx}=f(x)g(y)$$</p>
+        <p>$$\frac{dy}{g(y)}=f(x)dx$$</p>
+        <p>$$\int\frac{dy}{g(y)}=\int f(x)dx$$</p>
         
-        <h4>Higher-order ODE:</h4>
-        $$a_{n}(x)\frac{d^{n}y}{dx^{n}} + a_{n-1}(x)\frac{d^{n-1}y}{dx^{n-1}} + ... + a_{1}(x)\frac{dy}{dx} + a_{0}(x)y = f(x)$$
+        <p><strong>Factor Method</strong></p>
+        <p>$$\frac{dy}{dx}+P(x)y=Q(x)$$</p>
+        <p>$$\mu(x)=e^{\int P(x)dx}$$</p>
+        <p>$$\frac{d}{dx}(\mu(x)y)=\mu(x)Q(x)$$</p>
         
-        <p>A linear ODE is one where the dependent variable and its derivatives appear only in a linear form (i.e., they are not multiplied together). Anything else is considered non-linear.</p>
+        <h4 id="yfrac1muxprotectintmuxqxdxc-second-order-equations" class="unnumbered">Second Order Equations</h4>
+        <p>$$y=\frac{1}{\mu(x)}\int \mu(x)Q(x)dx+C$$</p>
+        <p><strong>Homogeneous Equations with Constant Coefficients</strong></p>
+        <p><em>Not</em></p>
+        <p><strong>Nonhomogeneous Equations: Method of Undetermined Coefficients</strong></p>
+        <p><em>Finished</em></p>
         
-        <h3>Solving ODEs</h3>
-        <h4>Separable ODEs:</h4>
-        $$\frac{dy}{dx} = f(x)g(y)$$
+        <h2 id="special-theorems-and-problems" class="unnumbered">Special Theorems and Problems</h2>
+        <h3 id="cauchys-problem" class="unnumbered">Cauchy’s Problem</h3>
+    </div>
+    
+    
+      
+      
         
-        <p>Rearranges to:</p>
-        $$\frac{dy}{g(y)} = f(x)dx$$
-        
-        <p>Integrating both sides:</p>
-        $$\int \frac{dy}{g(y)} = \int f(x)dx$$
-        
-        <h4>Integrating Factor Method:</h4>
-        $$\frac{dy}{dx} + P(x)y = Q(x)$$
-        
-        <p>Multiplying by the integrating factor:</p>
-        $$\mu(x) = e^{\int P(x)dx}$$
-        
-        <p>Gives:</p>
-        $$\frac{d}{dx}(\mu(x)y) = \mu(x)Q(x)$$
-        
-        <p>Solving:</p>
-        $$y = \frac{1}{\mu(x)} \int \mu(x)Q(x)dx + C$$
-        
-        <h3>Higher-Order Equations</h3>
-        <h4>Homogeneous Equations with Constant Coefficients:</h4>
-        $$a_n \frac{d^n y}{dx^n} + a_{n-1} \frac{d^{n-1} y}{dx^{n-1}} + ... + a_1 \frac{dy}{dx} + a_0 y = 0$$
-        
-        <h4>Non-Homogeneous Equations:</h4>
-        $$a_n \frac{d^n y}{dx^n} + a_{n-1} \frac{d^{n-1} y}{dx^{n-1}} + ... + a_1 \frac{dy}{dx} + a_0 y = f(x)$$
-        
-        <h3>Special Theorems and Problems</h3>
-        <h4>Cauchy's Problem</h4>
-        <p>More details to be added...</p>
     </div>
     <a href="analisi1.pdf" class="button" download>Download PDF</a>
     <a href="index.html" class="button home-button">Return to Main Page</a>
